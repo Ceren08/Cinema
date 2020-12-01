@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c3dc86c8-0b76-424c-9f2b-6a0fcb13d01e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[select * from filmler]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="salonid" class="java.lang.Integer"/>
+	<field name="seansid" class="java.lang.Integer"/>
+	<title>
+		<band height="37" splitType="Stretch">
+			<staticText>
+				<reportElement x="235" y="17" width="100" height="20" forecolor="#FF0000" uuid="63ebe26b-08d8-42ea-928a-f78e7a1186b6"/>
+				<textElement>
+					<font fontName="Lucida Sans" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FILM RAPOR]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="74" y="15" width="100" height="20" uuid="da30c72e-00d0-453d-9518-d74a61432254"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<text><![CDATA[Film]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="223" y="15" width="100" height="20" uuid="d11e6ecd-0dc3-4657-bea6-bbd41f5848ca"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<text><![CDATA[Salon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="397" y="15" width="100" height="20" uuid="80afe38b-5b40-4da8-b8f0-22a83458b453"/>
+				<textElement>
+					<font fontName="Comic Sans MS" size="12"/>
+				</textElement>
+				<text><![CDATA[Seans]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="74" y="1" width="100" height="20" uuid="1b1dd657-93f5-47b6-896e-312d778a7a8e"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="1" width="100" height="20" uuid="1d2841e0-5d7f-4538-9ab3-8f4d2f295a26"/>
+				<textFieldExpression><![CDATA[$F{salonid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="397" y="1" width="100" height="20" uuid="c177d06a-6b79-486c-9a75-f8d557dbf457"/>
+				<textFieldExpression><![CDATA[$F{seansid}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
